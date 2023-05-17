@@ -5,11 +5,15 @@ import { exampleProducts } from '@react-mono/products';
 import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
+// import MyLinks from 'src/components/Links/links';
+import Mybutton from '../components/Button/button';
 
 export function App() {
   return (
     <div>
 
+      {/* <MyLinks></MyLinks> */}
+      <Mybutton></Mybutton>
       <Banner text="Welcome to our admin app." />
       <ul>
         {exampleProducts.map((product) => (
