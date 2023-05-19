@@ -1,21 +1,22 @@
 {
-  "name": "admin",
+  "name": "admin1",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "admin/src",
+  "sourceRoot": "apps/admin1/src",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/admin1"
+      },
       "configurations": {
         "development": {
-          "mode": "development",
-          "outputPath": "admin/dist"
+          "mode": "development"
         },
         "production": {
-          "mode": "production",
-          "outputPath": "admin/dist.prod"
+          "mode": "production"
         }
       }
     },
@@ -23,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "admin:build"
+        "buildTarget": "admin1:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "admin:build:development",
+          "buildTarget": "admin1:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "admin:build:production",
+          "buildTarget": "admin1:build:production",
           "hmr": false
         }
       }
@@ -40,36 +41,36 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "admin:build"
+        "buildTarget": "admin1:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "admin:build:development"
+          "buildTarget": "admin1:build:development"
         },
         "production": {
-          "buildTarget": "admin:build:production"
+          "buildTarget": "admin1:build:production"
         }
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/apps/admin"],
+      "outputs": ["coverage/apps/admin1"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/admin"
+        "reportsDirectory": "../coverage/apps/admin1"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/admin/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/admin1/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "admin:build"
+        "buildTarget": "admin1:build"
       }
     }
   },

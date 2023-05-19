@@ -2,8 +2,8 @@
 
 # compiled output
 dist
-admin/dist
-admin/dist.prod
+admin1/dist
+admin1/dist.prod
 tmp
 /out-tsc
 

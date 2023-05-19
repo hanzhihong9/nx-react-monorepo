@@ -6,15 +6,15 @@ import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
 // import MyLinks from 'src/components/Links/links';
-import Mybutton from '../components/Button/button';
+// import Mybutton from '../components/Button/button';
 
 export function App() {
   return (
     <div>
 
       {/* <MyLinks></MyLinks> */}
-      <Mybutton></Mybutton>
-      <Banner text="Welcome to our admin app." />
+      {/* <Mybutton></Mybutton> */}
+      <Banner text="Welcome to our admin1 app." />
       <ul>
         {exampleProducts.map((product) => (
           <li key={product.id}>
@@ -22,7 +22,7 @@ export function App() {
           </li>
         ))}
       </ul>
-      <NxWelcome title="admin" />
+      {/* <NxWelcome title="admin1" /> */}
 
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
@@ -33,14 +33,14 @@ export function App() {
       <div role="navigation">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            {/* <Link to="/">Home</Link> */}
           </li>
           <li>
-            <Link to="/page-2">Page 2</Link>
+            {/* <Link to="/page-2">Page 2</Link> */}
           </li>
         </ul>
       </div>
-      <Routes>
+      {/* <Routes>
         <Route
           path="/"
           element={
@@ -58,7 +58,7 @@ export function App() {
             </div>
           }
         />
-      </Routes>
+      </Routes> */}
       {/* END: routes */}
     </div>
   );
